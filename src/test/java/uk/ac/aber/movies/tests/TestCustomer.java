@@ -33,7 +33,7 @@ public class TestCustomer {
 	
 	@Test 
 	public void shouldBeInitialisedWithSpecifiedName() { 
-		assertEquals("Sam Jones", customer.getName(), "Incorrect Name");
+		assertEquals("Sam Jones (wrong)", customer.getName(), "Incorrect Name");
 	}	
 	
 	@Test
@@ -42,7 +42,7 @@ public class TestCustomer {
 		Transaction item = new Transaction(bladeRunnerMovieSD, TransactionType.PURCHASE);
 		customer.addMovieTransaction(item); 
 		
-		String statement = "Invoice from AberMovies\n\nCustomer: Sam Jones\n\n\tBlade Runner\t5.99\n" + 
+		String statement = "Invoice from AberMovies \n\nCustomer: Sam Jones\n\n\tBlade Runner\t5.99\n" +
 		  "Amount owed: 5.99\nYou earned 1 bonus points";
 		assertEquals(statement, customer.getStatement(), "Incorrect statement");
 	}
@@ -53,7 +53,7 @@ public class TestCustomer {
 		Transaction item = new Transaction(wonderWomanMovieHD, TransactionType.PURCHASE);
 		customer.addMovieTransaction(item); 
 		
-		String statement = "Invoice from AberMovies\n\nCustomer: Sam Jones\n\n\tWonder Woman\t9.99\n" + 
+		String statement = "Invoice from AberMovies\n\n Customer: Sam Jones\n\n\tWonder Woman\t9.99\n" +
 		  "Amount owed: 9.99\nYou earned 2 bonus points";
 		assertEquals(statement, customer.getStatement(), "Incorrect statement");
 	}
