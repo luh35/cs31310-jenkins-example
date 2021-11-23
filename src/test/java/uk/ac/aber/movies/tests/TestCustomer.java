@@ -14,7 +14,7 @@ public class TestCustomer {
 
 	/** Customer that is setup each time in Before action */
 	private Customer customer; 
-	
+
 	/** HD version of a movie used in some of the tests */
 	private Movie wonderWomanMovieHD = new Movie("Wonder Woman", MovieVersion.HD); 
 	
@@ -33,7 +33,7 @@ public class TestCustomer {
 	
 	@Test 
 	public void shouldBeInitialisedWithSpecifiedName() { 
-		assertEquals("Sam Jones", customer.getName(), "Incorrect Name");
+		assertEquals("Samuel Jones", customer.getName(), "Incorrect Name");
 	}	
 	
 	@Test
