@@ -12,8 +12,7 @@ Add the following into the `dependencies` section of the `pom.xml` file.
         <dependency>
             <groupId>org.jacoco</groupId>
             <artifactId>org.jacoco.agent</artifactId>
-            <classifier>runtime</classifier>
-            <version>0.8.6</version>
+            <version>0.8.7</version>
             <scope>test</scope>
         </dependency>
 
@@ -27,7 +26,7 @@ Add the following into the `plugins` section of the `pom.xml` file.
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
